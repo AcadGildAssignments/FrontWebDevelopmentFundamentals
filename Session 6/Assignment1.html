@@ -1,0 +1,33 @@
+<html>
+<head>
+   <title>Javascript -Min Max</title>
+</head>
+
+<div id="array"></div>
+<div id="max"></div>
+<div id="min"></div>
+<script language=javascript type="text/javascript">
+function arrayMin(arr) {
+  var len = arr.length, min = Infinity;
+  while (len--) {
+    if (arr[len] < min) {
+      min = arr[len];
+    }
+  }
+  return min;
+};
+function arrayMax(arr) {
+  var len = arr.length, max = -Infinity;
+  while (len--) {
+    if (arr[len] > max) {
+      max = arr[len];
+    }
+  }
+  return max;
+};
+var arr = [10,17,9,4,9,2,98]
+document.getElementById("array").innerHTML="array=" + arr;
+document.getElementById("min").innerHTML="min=" + arrayMin(arr);
+document.getElementById("max").innerHTML="max=" + arrayMax(arr);
+</script>
+</html>

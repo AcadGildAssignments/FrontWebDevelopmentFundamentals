@@ -1,0 +1,27 @@
+<html>
+<head>
+   <title>Javascript -Min Max</title>
+</head>
+
+<div id="bracket1"></div>
+<div id="bracket2"></div>
+<div id="bracket3"></div>
+<script language=javascript type="text/javascript">
+function checkBrackets(str){
+    var depth = 0;
+    for(var i in str){   
+        if(str[i] == '('){
+            depth ++;
+        } else if(str[i] == ')') {
+            depth --;
+        }  
+        if (depth < 0) return 'incorrect';
+    }
+    if(depth > 0) return 'incorrect';
+    return 'correct';
+}
+document.getElementById("bracket1").innerHTML="checkBrackets('( ( a + b ) / 5 – d )')=" + checkBrackets('( ( a + b ) / 5 – d )');
+document.getElementById("bracket2").innerHTML="checkBrackets('( ( ) a + b ) / 5 – d )')=" + checkBrackets('( ( ) a + b ) / 5 – d )');
+document.getElementById("bracket3").innerHTML="checkBrackets('( ) ) ( ( a + b ) / 5 – d )')=" + checkBrackets('( ) ) ( ( a + b ) / 5 – d )');
+</script>
+</html>
