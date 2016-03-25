@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>01 - Like/Unlike button</title>
+<style>
+body {
+    padding: 0; 
+    margin:0;
+}
+#wrap {
+    width: 70%;
+    margin: 0 auto;
+}
+button {
+    border: none;
+    padding: 3px 19px;  
+    font-size: 18px;
+    background: #041952;
+    color: #ed7f07;
+}
+</style>
+</head>
+<body>
+    <div id="wrap">
+        <div>
+            <button id="like-unlike">Like</button>
+        </div>
+    </div>
+<script language=javascript type="text/javascript">
+function changeButton() {
+    var buttonText = likeButton.innerHTML;
+
+    if (buttonText === 'Like') {
+        buttonText = 'Unlike';
+    } else {
+        buttonText = 'Like';
+    }
+
+    likeButton.innerHTML = buttonText;
+}
+var likeButton = document.getElementById('like-unlike');
+likeButton.addEventListener('click', changeButton, false);
+</script>
+</html>

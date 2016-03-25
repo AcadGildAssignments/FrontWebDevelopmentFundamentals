@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Text field</title>
+        <meta charset="UTF-8">
+    </head>
+  <body>
+    <p>Click somewhere on the screen to see your mouse position</p>
+    <script type="text/javascript">
+function printMouseCoordinates(ev) {
+    document.body.innerHTML += 'X: ' + ev.pageX + '; Y: ' + ev.pageY + '; Time: ' + new Date() + '</br>';
+}
+document.addEventListener('click', printMouseCoordinates, false);
+        </script>
+    </body>
+</html>
